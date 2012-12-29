@@ -1,0 +1,17 @@
+<p>
+上の句：
+<%= @card.first_half %>
+</p>
+<p>
+下の句：
+<%= @card.latter_half %>
+</p>
+<p>
+作者：
+<%= @card.author %>
+</p>
+<p>
+解説：
+<%= @card.comment %>
+</p>
+

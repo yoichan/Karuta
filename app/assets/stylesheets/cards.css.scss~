@@ -1,0 +1,21 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#kaminoku{
+	font-size: 15px;	
+	position: absolute;
+	top:130px;
+	left:210px;
+}
+#fukidashi{
+	font-size: 15px;	
+	position: absolute;
+	top:100px;
+	left:180px;
+}
+#res{
+	font-size: 30px;
+	color: teal;
+	margin-top: 30px;
+}

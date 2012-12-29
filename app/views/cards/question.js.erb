@@ -1,0 +1,14 @@
+<p>
+上の句：
+</p>
+<p>
+$(function(){var count = 14500;
+setTimeout(function(){$(<%= @draw_card.first_half %>).fadeIn(1000);}, count);
+});
+</p>
+<p>
+<% @cards.each do |card| %>
+	<% card_image = 'hyakunin-tori/tori-' << card.card_id << '.png' %>
+	<%= link_to image_tag(card_image, :width => 100), cards_check_path(@draw_card,card) %>
+<% end %>
+</p>

@@ -1,0 +1,3 @@
+class Card < ActiveRecord::Base
+  attr_accessible :author, :comment, :first_half, :latter_half, :cardId
+end

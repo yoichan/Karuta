@@ -1,0 +1,15 @@
+<p>
+<%= image_tag 'yomite.jpg', :width => 150 %>
+<div id="fukidashi">
+	<%= image_tag 'fukidashi.jpg', :width => 380, :heigth => 20 %>
+</div>
+<div id="kaminoku">
+<%= @draw_card.first_half %>...
+</div>
+</p>
+<p>
+<% @cards.each do |card| %>
+	<% card_image = 'hyakunin-tori/tori-' << card.card_id << '.png' %>
+	<%= link_to image_tag(card_image, :width => 100), cards_check_path(@draw_card,card) %>
+<% end %>
+</p>

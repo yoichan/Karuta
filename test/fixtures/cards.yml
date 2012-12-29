@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  first_half: MyString
+  latter_half: MyString
+  author: MyString
+  comment: MyString
+
+two:
+  first_half: MyString
+  latter_half: MyString
+  author: MyString
+  comment: MyString

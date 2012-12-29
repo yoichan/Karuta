@@ -1,0 +1,5 @@
+class AddIdToCards < ActiveRecord::Migration
+  def change
+    add_column :cards, :cardId, :string, :after => :id
+  end
+end
