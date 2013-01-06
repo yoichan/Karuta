@@ -1,4 +1,0 @@
-<p>
-上の句：
-<%= @card.first_half %>
-</p>
