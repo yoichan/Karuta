@@ -21,7 +21,7 @@ class CardsController < ApplicationController
 	def question
 		@cards = Card.all
 		if params[:card_id] == '000' then
-			@draw_card = Card.find_by_card_id(rand(10) + 1 )
+			@draw_card = Card.find_by_card_id('%03d' % (rand(10) + 1) )
 		else
 			@draw_card = Card.find_by_card_id(params[:card_id])
 	

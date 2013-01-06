@@ -27,11 +27,9 @@ class CardsController < ApplicationController
 	
 		end
 		@draw_card_image = 'hyakunin-tori/tori-' << @draw_card.card_id << '.png'
-		render
 		respond_to do |format|
 			format.html
 			format.json { render json: @draw_card }
-			format.js
 		end
 
 	end
