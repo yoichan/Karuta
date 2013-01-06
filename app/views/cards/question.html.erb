@@ -1,5 +1,6 @@
 <p>
 <%= image_tag 'yomite.jpg', :width => 150 %>
+
 <div id="fukidashi">
 	<%= image_tag 'fukidashi.jpg', :width => 320, :heigth => 20 %>
 </div>
@@ -7,6 +8,7 @@
 <%= @draw_card.first_half %>...
 </div>
 </p>
+
 <p>
 <% @cards.each do |card| %>
 	<% card_image = 'hyakunin-tori/tori-' << card.card_id << '.png' %>

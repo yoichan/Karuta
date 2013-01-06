@@ -1,7 +1,0 @@
-<p>
-<% @cards.each do |card| %>
-	<p>
-	<%= link_to card.first_half, cards_show_path(card) %>
-	</p>
-<% end %>
-</p>
