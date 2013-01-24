@@ -65,13 +65,11 @@ class CardsController < ApplicationController
 		draw_id = params[:draw]
 		ans_id = params[:ans]
 		
-	
 		#インスタンス変数を使ってそれぞれのカードをテンプレートに渡す
 		@draw_card = Card.find(draw_id)
 		@card = Card.find(ans_id)
 	
 		#正誤を判定し、結果をインスタンス変数でテンプレートに渡す
-
 		@is_right_card
 		if draw_id == ans_id then
 			@is_right_card = true

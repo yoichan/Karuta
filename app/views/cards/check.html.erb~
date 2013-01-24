@@ -8,19 +8,28 @@
 	</div>
 <% end %>
 
+<<<<<<< HEAD
 <div class='subtitle'>
 あなたが取った札
 </div>
+=======
+<p>
+あなたが取った札
+</p>
+>>>>>>> dbc0e3dca017116b5d8f75112fb437e0df85db58
 
 <!-- 部分テンプレートを使ってみる -->
 <%= render 'shared/detail' %>
 
+<<<<<<< HEAD
 
 <div class = 'subtitle'>累計結果</div>
 <p>正解: <%= @win_count %></p>
 <p>お手付き: <%= @loss_count %></p>
 
 
+=======
+>>>>>>> dbc0e3dca017116b5d8f75112fb437e0df85db58
 <p>
 <% if @is_right_card == false then %>
 	<%= link_to '再チャレンジ', '/cards/question/' << @draw_card.card_id %>| 

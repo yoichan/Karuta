@@ -40,12 +40,16 @@ class CardsController < ApplicationController
 		
 		if params[:card_id] == '000' then
 			#ランダムでカードを選択
+<<<<<<< HEAD
 			randNum = rand(10) + 1
 			while session[:is_picked].split(",")[randNum] == "1" do
 				randNum = rand(10) + 1
 			end
 
 			@draw_card = Card.find_by_card_id('%03d' % randNum)
+=======
+			@draw_card = Card.find_by_card_id('%03d' % (rand(10) + 1) )
+>>>>>>> dbc0e3dca017116b5d8f75112fb437e0df85db58
 		else
 			#指定されたカードを選択
 			@draw_card = Card.find_by_card_id(params[:card_id])
@@ -65,13 +69,19 @@ class CardsController < ApplicationController
 		draw_id = params[:draw]
 		ans_id = params[:ans]
 		
+<<<<<<< HEAD
 	
+=======
+>>>>>>> dbc0e3dca017116b5d8f75112fb437e0df85db58
 		#インスタンス変数を使ってそれぞれのカードをテンプレートに渡す
 		@draw_card = Card.find(draw_id)
 		@card = Card.find(ans_id)
 	
 		#正誤を判定し、結果をインスタンス変数でテンプレートに渡す
+<<<<<<< HEAD
 
+=======
+>>>>>>> dbc0e3dca017116b5d8f75112fb437e0df85db58
 		@is_right_card
 		if draw_id == ans_id then
 			@is_right_card = true
@@ -99,6 +109,8 @@ class CardsController < ApplicationController
 			session[:loss] = 0
 		end
 
+		@win_count = session[:win]
+		@loss_count = session[:loss]
 		
 	end
 
