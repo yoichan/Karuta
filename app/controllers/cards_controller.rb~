@@ -99,8 +99,6 @@ class CardsController < ApplicationController
 			session[:loss] = 0
 		end
 
-		@win_count = session[:win]
-		@loss_count = session[:loss]
 		
 	end
 

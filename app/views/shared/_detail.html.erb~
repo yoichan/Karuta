@@ -1,4 +1,4 @@
-<%= image_tag 'hyakunin-tori/tori-' << @card.card_id << '.png', :width => 100 %>
+<%= image_tag 'hyakunin-tori/tori-' << @card.card_id << '.png', :width => 150 %>
 <p>
 上の句：
 <%= @card.first_half %>

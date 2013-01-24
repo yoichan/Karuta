@@ -24,7 +24,7 @@
 .subtitle{
 	font-size: 15;
 	padding: 3px;
-	margin-bottom: 5px;
+	margin-bottom: 3px;
 	color: olive; 
 	background-color: beige;
 

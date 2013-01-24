@@ -1,4 +1,6 @@
 <!--<p>is picked flags = <%= @is_picked_list.join(',') %></p>-->
+<p>win count = <%= @win_count %></p>
+<p>loss count = <%= @loss_count %></p>
 <p>
 <%= image_tag 'yomite.jpg', :width => 150 %>
 
