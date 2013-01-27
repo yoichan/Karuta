@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230011643) do
+ActiveRecord::Schema.define(:version => 20130124195647) do
 
   create_table "cards", :force => true do |t|
     t.string   "card_id"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20121230011643) do
     t.string   "latter_half"
     t.string   "author"
     t.string   "comment"
+    t.string   "place"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
