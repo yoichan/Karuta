@@ -9,7 +9,7 @@
 require "csv"
 
 Card.delete_all
-Card.connection.execute("alter table cards AUTO_INCREMENT = 1")
+#Card.connection.execute("alter table cards AUTO_INCREMENT = 1")
 
 CSV.foreach('db/hyakunin_ishu.csv') do |row|
 	Card.create(:card_id => row[0], :first_half => row[1], :latter_half => row[2], :author => row[3], :comment => row[4], :place => row[5])
