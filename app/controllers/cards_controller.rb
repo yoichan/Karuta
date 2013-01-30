@@ -100,6 +100,8 @@ class CardsController < ApplicationController
 		@win_count = session[:win]
 		@loss_count = session[:loss]
 		
+		
+		@pins = @card.to_gmaps4rails
 	end
 
 end

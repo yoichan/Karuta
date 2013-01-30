@@ -19,3 +19,18 @@
 訳:
 <%= @card.comment %>
 </p>
+<p>
+縁の場所:
+<%= @card.place %>
+</p>
+<p>
+<%= if !@card.place.nil? then 
+ gmaps({
+		"markers" => { "data" => @pins },
+		"map_options" => { "auto_adjust" => true,
+											"auto_zoom" => false,
+											"zoom" => 7 }
+}) 
+ end %>
+ <%= yield :scripts %> 
+</p>
