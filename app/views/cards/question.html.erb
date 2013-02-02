@@ -1,14 +1,24 @@
 <!--<p>is picked flags = <%= @is_picked_list.join(',') %></p>-->
-<p>
-<%= image_tag 'yomite.jpg', :width => 150 %>
-
+<p >
+<%= image_tag 'yomite.jpg', :id => 'yomite', :width => 150 %>
+<div id = "hint_1">
 <div id="fukidashi">
 	<%= image_tag 'fukidashi.jpg', :width => 320, :heigth => 20 %>
 </div>
 <div id="kaminoku">
 <%= @draw_card.first_half %>...
 </div>
+</div>
 </p>
+
+<script><!--
+	$(document).ready(function(){
+		$('#hint_1').hide();
+	});
+	$("#yomite").click(function(){
+			$('#hint_1').show(2000);
+	});
+	//--></script>
 
 <p>
 <% @cards.each do |card| %>
