@@ -23,7 +23,10 @@ class CardsController < ApplicationController
 		if session[:win].blank? then
 			session[:win] = 0 
 		end
+		# session[:win] =0 if session[:win].blank?
+		
 		@win_count = session[:win]	
+		# @win_count = session[:win].blank? 1:session[:win]	 #FIXME 
 
 		if session[:loss].blank? then
 			session[:loss] = 0

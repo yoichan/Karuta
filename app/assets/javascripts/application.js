@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.jrumble.1.3
+//= require jquery.jrumble.1.3.min

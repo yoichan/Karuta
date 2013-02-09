@@ -11,13 +11,23 @@
 </div>
 </p>
 
-<script><!--
+<script type = "text/javascript" charset = "utf-8"><!--
 	$(document).ready(function(){
 		$('#hint_1').hide();
+		$('#yomite').jrumble({
+			x: 10,
+			y: 10,
+			rotation:4,
+			speed: 40
+		});
 	});
-	$("#yomite").click(function(){
+	$('#yomite').hover(function(){
 			$('#hint_1').show(2000);
+			$(this).trigger('startRumble');
+			}, function(){
+			$(this).trigger('stopRumble');
 	});
+
 	//--></script>
 
 <p>
