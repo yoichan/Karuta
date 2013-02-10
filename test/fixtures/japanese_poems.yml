@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  poem_no: MyString
+  first_half: MyString
+  last_half: MyString
+  poet: MyString
+  modern_translation: MyString
+  related_place: MyString
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  poem_no: MyString
+  first_half: MyString
+  last_half: MyString
+  poet: MyString
+  modern_translation: MyString
+  related_place: MyString
+  latitude: 1.5
+  longitude: 1.5

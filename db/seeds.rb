@@ -8,9 +8,9 @@
 
 require "csv"
 
-Card.delete_all
-#Card.connection.execute("alter table cards AUTO_INCREMENT = 1")
-Card.connection.execute("select setval('cards_id_seq', 1, false)")
-CSV.foreach('db/hyakunin_ishu.csv') do |row|
-	Card.create(:card_id => row[0], :first_half => row[1], :latter_half => row[2], :author => row[3], :comment => row[4], :place => row[5])
+JapanesePoem.delete_all
+#JapanesePoem.connection.execute("alter table  AUTO_INCREMENT = 1")
+#JapanesePoem.connection.execute("select setval('japanese_poems_id_seq', 1, false)")
+CSV.foreach('db/japanese_poems.csv') do |row|
+	JapanesePoem.create(:poem_no => row[0], :first_half => row[1], :last_half => row[2], :poet => row[3], :modern_translation => row[4], :related_place => row[5])
 end

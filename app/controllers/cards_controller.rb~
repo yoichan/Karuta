@@ -19,19 +19,9 @@ class CardsController < ApplicationController
   end
 	
 	def question
-		@sessionID = request.session_options[:id]
-		if session[:win].blank? then
-			session[:win] = 0 
-		end
-		# session[:win] =0 if session[:win].blank?
-		
-		@win_count = session[:win]	
-		# @win_count = session[:win].blank? 0:session[:win]	
-
-		if session[:loss].blank? then
-			session[:loss] = 0
-		end
-		@loss_count = session[:loss]
+		@sessionID  = request.session_options[:id]
+	  @win_count  = session[:win]  = session[:win].blank?  ? 0 : session[:win]
+		@loss_count = session[:loss] = session[:loss].blank? ? 0 : session[:loss]
 		
 		if session[:is_picked].blank? then
 			session[:is_picked] = "0,0,0,0,0,0,0,0,0,0,0"

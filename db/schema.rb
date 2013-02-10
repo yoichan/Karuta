@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130130110909) do
+ActiveRecord::Schema.define(:version => 20130210133323) do
 
   create_table "cards", :force => true do |t|
     t.string   "card_id"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(:version => 20130130110909) do
     t.float    "longitude"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "japanese_poems", :force => true do |t|
+    t.string   "poem_no"
+    t.string   "first_half"
+    t.string   "last_half"
+    t.string   "poet"
+    t.string   "modern_translation"
+    t.string   "related_place"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
   end
 
 end
