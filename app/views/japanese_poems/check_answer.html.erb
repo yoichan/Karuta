@@ -1,7 +1,8 @@
+
 <div class = 'subtitle'>
 	結果
 </div>
-<% if @is_right_card then %>
+<% if @is_match then %>
 	<div id='res'>
 	◎	
 	</div>
@@ -18,7 +19,7 @@
 </div>
 
 <!-- 部分テンプレートを使ってみる -->
-<%= render 'shared/detail' %>
+<%= render 'shared/poem_detail' %>
 
 
 <div class = 'subtitle'>累計結果</div>
@@ -27,9 +28,9 @@
 
 
 <p>
-<% if @is_right_card == false then %>
-	<%= link_to '再チャレンジ', '/cards/question/' << @draw_card.card_id %>| 
+<% if @is_match == false then %>
+	<%= link_to '再チャレンジ', '/japanese_poems/play_game/' << @subject_poem.id.to_s %>| 
 <% end %>
 
-<%= link_to '次へ', '/cards/question' %>
+<%= link_to '次へ', '/japanese_poems/play_game' %>
 </p>

@@ -1,0 +1,36 @@
+<p>
+
+<%= image_tag @picked_poem.firsthalf_imagefile, :width => 100 %>
+<%= image_tag @picked_poem.lasthalf_imagefile, :width => 100 %>
+</p>
+<p>
+上の句：
+<%= @picked_poem.first_half %>
+</p>
+<p>
+下の句：
+<%= @picked_poem.last_half %>
+</p>
+<p>
+作者：
+<%= @picked_poem.poet %>
+</p>
+<p>
+訳:
+<%= @picked_poem.modern_translation %>
+</p>
+<p>
+縁の場所:
+<%= @picked_poem.related_place %>
+</p>
+<p>
+<%= if !@picked_poem.related_place.nil? then 
+ gmaps({
+		"markers" => { "data" => @pins },
+		"map_options" => { "auto_adjust" => true,
+											"auto_zoom" => false,
+											"zoom" => 7 }
+}) 
+ end %>
+ <%= yield :scripts %> 
+</p>

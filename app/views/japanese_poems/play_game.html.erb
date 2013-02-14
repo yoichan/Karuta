@@ -1,12 +1,11 @@
-<!--<p>is picked flags = <%= @is_picked_list.join(',') %></p>-->
-<p >
+<p>
 <%= image_tag 'yomite.jpg', :id => 'yomite', :width => 150 %>
 <div id = "hint_1">
 <div id="fukidashi">
 	<%= image_tag 'fukidashi.jpg', :width => 320, :heigth => 20 %>
 </div>
 <div id="kaminoku">
-<%= @draw_card.first_half %>...
+<%= @subject_poem.first_half %>...
 </div>
 </div>
 </p>
@@ -15,10 +14,10 @@
 	$(document).ready(function(){
 		$('#hint_1').hide();
 		$('#yomite').jrumble({
-			x: 10,
-			y: 10,
-			rotation:4,
-			speed: 40
+			x: 3,
+			y: 3,
+			rotation:2,
+			speed:80 
 		});
 	});
 	$('#yomite').hover(function(){
@@ -31,19 +30,7 @@
 	//--></script>
 
 <p>
-<% @cards.each do |card| %>
-<% 
-	if @is_picked_list[card.card_id.to_i] == "0" then
-	card_image = 'hyakunin-tori/tori-' << card.card_id << '.png' 
-%>
-<%= link_to image_tag(card_image, :width => 100), cards_check_path(@draw_card,card) %>
-<%
-	else
-		card_image = 'hyakunin-tori/blank.png'
-	%>
-	<%= image_tag card_image, :width => 100 %>
-	<%
-	end
-%>
-<% end %>
+<% @remining_poems.each do |poem| %>
+<%= link_to image_tag(poem.lasthalf_imagefile, :width => 100),check_answer_path(@subject_poem,poem)%>
+<%	end %>
 </p>
