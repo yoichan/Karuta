@@ -16,6 +16,7 @@ class JapanesePoem < ActiveRecord::Base
 		('hyakunin-tori/tori-' << format("%03d", self.id) << '.png')
 	end
 
+
 	def self.select_random_poem(target_poems_id)
 	  random_seed = rand(target_poems_id.length)	
 		random_poem_id = target_poems_id[random_seed]

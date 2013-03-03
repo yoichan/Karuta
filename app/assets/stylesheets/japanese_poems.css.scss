@@ -62,7 +62,7 @@
 	position:relative;
 }
 
-#hint-str{
+.hint-str{
 	display: block;
 	font-size: 12px;
 	width: 230px;
@@ -80,7 +80,7 @@
 .triangle{
 	width: 0;
 	height: 0;
-	border-top: 20px solid #ffffb2;
+	border-top: 10px solid #ffffb2;
 	border-right: 20px solid transparent;
 	border-left: 20px solid transparent;
 	border-bottom: 20px solid transparent;

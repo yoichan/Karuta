@@ -11,13 +11,42 @@
 	<div id = "help">
 		<%= image_tag 'hinto.png', :id => 'helper', :width => 70 %>
 		<div id = "hint">
-			<div class="triangle"></div>
-			<div id = "hint-str"> 
+			<div id = "hint-poet">
+				<div class="triangle"></div>
+				<div class = "hint-str"> 
+						やや。ヒントですかな？作者は<br>「
+						<%= @subject_poem.poet %>
+						」ですぞ。	
+				</div>
+			</div>	
 
-					やや。ヒントですかな？歌の口語訳は、<br>「
-					<%= @subject_poem.modern_translation %>
-					」ですぞ。	
-			</div>
+			<div id = "hint-place">
+				<div class="triangle"></div>
+				<div class = "hint-str"> 
+						やや。ヒントですかな？縁の地は<br>「
+						<%= if @subject_poem.related_place == nil 
+									"不明"
+								else
+									@subject_poem.related_place
+								end%>
+						」ですぞ。	
+				</div>
+			</div>	
+
+			<div id = "hint-translation">
+				<div class="triangle"></div>
+				<div class = "hint-str"> 
+						やや。ヒントですかな？口語訳は<br>「
+						<%= @subject_poem.modern_translation %>
+						」ですぞ。	
+				</div>
+			</div>	
+
+
+
+
+
+
 		</div>
 	</div>
 
