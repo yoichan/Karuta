@@ -7,18 +7,20 @@
 			<%= @subject_poem.first_half %>...
 			</div>
 	</div>
-
+	
 	<div id = "help">
 		<%= image_tag 'hinto.png', :id => 'helper', :width => 70 %>
 		<div id = "hint">
-			<%= image_tag 'fukidashi2.jpg', :id => 'fukidashi2', :width => 280 %>
-			<div id = "hint-str">
-				やや。ヒントですかな？歌の口語訳は、<br>「
+			<div class="triangle"></div>
+			<div id = "hint-str"> 
+
+					やや。ヒントですかな？歌の口語訳は、<br>「
 					<%= @subject_poem.modern_translation %>
 					」ですぞ。	
 			</div>
 		</div>
 	</div>
+
 
 </div>
 

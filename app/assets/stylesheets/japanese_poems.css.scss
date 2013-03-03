@@ -22,7 +22,7 @@
 #first_half{
 	font-size: 15px;	
 	position: absolute;
-	top: 15px;
+	top: 25px;
 	left: 30px;	
 }
 
@@ -44,29 +44,50 @@
 	display: block;
 	position: relative;	
 	overflow: hidden;
-	margin-top: 65px;
+	margin-top: 90px;
+	margin-right: 60px;
 	float: right;
 }
 
 #helper{
-	margin-top:60px;
+	margin-top:0px;
 	float: right;
 }
 
 #hint{
 	float: left;
+	width: 300px;
+	margin: auto;
+	margin-bottom: 50px;
+	position:relative;
 }
 
 #hint-str{
+	display: block;
 	font-size: 12px;
-	position: absolute;
-	width: 190px;
-	top: 30px;
-	left: 30px;
+	width: 230px;
+	margin-right: 40px;
+	padding: 15px 20px;
 	color: gray;
+	background-color: #ffffb2;
+
+	-moz-border-radious: 20px;
+	-webkit-border-radious: 20px;
+	-khtml-border-radious: 20px;
+	border-radius: 20px;
 }
 
-
+.triangle{
+	width: 0;
+	height: 0;
+	border-top: 20px solid #ffffb2;
+	border-right: 20px solid transparent;
+	border-left: 20px solid transparent;
+	border-bottom: 20px solid transparent;
+	float: right;
+	margin-top: 30px;
+	margin-right: 10px;
+}
 
 //-------------
 //回答の部分
