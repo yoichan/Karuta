@@ -1,36 +1,31 @@
 <p>
-<%= image_tag 'yomite.jpg', :id => 'yomite', :width => 150 %>
-<div id = "hint_1">
-<div id="fukidashi">
-	<%= image_tag 'fukidashi.jpg', :width => 320, :heigth => 20 %>
-</div>
-<div id="kaminoku">
-<%= @subject_poem.first_half %>...
-</div>
-</div>
-</p>
+<div id = "question">
+	<%= image_tag 'yomite.png', :id => 'yomite', :width => 100 %>
+	<div id = "kaminoku">
+			<%= image_tag 'fukidashi.jpg', :id => 'fukidashi', :width => 320, :heigth => 20 %>
+			<div id="first_half">
+			<%= @subject_poem.first_half %>...
+			</div>
+	</div>
 
-<script type = "text/javascript" charset = "utf-8"><!--
-	$(document).ready(function(){
-		$('#hint_1').hide();
-		$('#yomite').jrumble({
-			x: 3,
-			y: 3,
-			rotation:2,
-			speed:80 
-		});
-	});
-	$('#yomite').hover(function(){
-			$('#hint_1').show(2000);
-			$(this).trigger('startRumble');
-			}, function(){
-			$(this).trigger('stopRumble');
-	});
+	<div id = "help">
+		<%= image_tag 'hinto.png', :id => 'helper', :width => 70 %>
+		<div id = "hint">
+			<%= image_tag 'fukidashi2.jpg', :id => 'fukidashi2', :width => 280 %>
+			<div id = "hint-str">
+				やや。ヒントですかな？歌の口語訳は、<br>「
+					<%= @subject_poem.modern_translation %>
+					」ですぞ。	
+			</div>
+		</div>
+	</div>
 
-	//--></script>
+</div>
 
-<p>
+
+<div id = "cards">
 <% @remining_poems.each do |poem| %>
 <%= link_to image_tag(poem.lasthalf_imagefile, :width => 100),check_answer_path(@subject_poem,poem)%>
 <%	end %>
+</div>
 </p>

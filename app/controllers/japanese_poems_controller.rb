@@ -46,8 +46,8 @@ class JapanesePoemsController < ApplicationController
 
 	#sessionの操作
 	def reset_game
-		session[:correct] = ""
-		session[:wrong] = ""
+		session[:correct] = "0"
+		session[:wrong] = "0"
 		session[:remined] = "1,2,3,4,5,6,7,8,9,10"
 	end
 
@@ -71,11 +71,13 @@ class JapanesePoemsController < ApplicationController
 	end
 
 	def get_correct_id
-		session[:correct].blank? ? nil : session[:correct].split(",")
+#		binding.pry
+		session[:correct].blank? ? [] : session[:correct].split(",")
+		
 	end
 	
 	def get_wrong_id
-		session[:wrong].blank? ? nil : session[:wrong].split(",")
+		session[:wrong].blank? ? [] : session[:wrong].split(",")
 	end
 
 end

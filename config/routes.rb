@@ -1,10 +1,8 @@
 Karuta::Application.routes.draw do
 
   get "japanese_poems/index"
-
   get "japanese_poems/show"
 
-  #get "japanese_poems/play_game"
 	match 'japanese_poems/play_game(/:id)' => 'japanese_poems#play_game', :defaults => {:id => '0'}
 
   get "japanese_poems/check_answer/:subject_poem/:picked_poem" => "japanese_poems#check_answer", as: "check_answer"

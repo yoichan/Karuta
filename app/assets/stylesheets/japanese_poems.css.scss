@@ -1,3 +1,90 @@
 // Place all the styles related to the japanese_poems controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+//-------------
+//上の句の部分
+
+#yomite{
+	width: 100px;
+	display: block;
+	float: left;
+}
+
+#kaminoku{
+	position:relative;
+	display: block;
+	margin-left: 100px;
+}
+
+#first_half{
+	font-size: 15px;	
+	position: absolute;
+	top: 15px;
+	left: 30px;	
+}
+
+#fukidashi{
+	font-size: 15px;	
+	position: absolute;
+}
+
+#question{
+	display: block;
+	height: 230px;
+}
+
+
+//-------------
+//ヒントの部分
+
+#help{
+	display: block;
+	position: relative;	
+	overflow: hidden;
+	margin-top: 65px;
+	float: right;
+}
+
+#helper{
+	margin-top:60px;
+	float: right;
+}
+
+#hint{
+	float: left;
+}
+
+#hint-str{
+	font-size: 12px;
+	position: absolute;
+	width: 190px;
+	top: 30px;
+	left: 30px;
+	color: gray;
+}
+
+
+
+//-------------
+//回答の部分
+
+#res{
+	font-size: 30px;
+	color: teal;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.subtitle{
+	font-size: 15;
+	padding: 3px;
+	margin-top: 10px;
+	margin-botom: 10px;
+	color: olive; 
+	background-color: beige;
+}
+
+
