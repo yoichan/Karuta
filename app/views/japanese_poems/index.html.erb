@@ -1,2 +1,17 @@
-<h1>JapanesePoems#index</h1>
-<p>Find me in app/views/japanese_poems/index.html.erb</p>
+<table>
+  <tr>
+    <th>歌番</th>
+    <th>上の句</th>
+    <th>下の句</th>
+    <th></th>
+
+<% @poems.each do |poem| %>
+  <tr>
+    <td><%= poem.poem_no %></td>
+    <td><%= poem.first_half %></td>
+    <td><%= poem.last_half %></td>
+    <td> <%= link_to 'Show', show_path(poem)%></td>
+  </tr>
+<% end %>
+</table>
+

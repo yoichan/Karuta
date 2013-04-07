@@ -19,11 +19,11 @@ ActiveRecord::Schema.define(:version => 20130210133323) do
     t.string   "latter_half"
     t.string   "author"
     t.string   "comment"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.string   "place"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
   end
 
   create_table "japanese_poems", :force => true do |t|

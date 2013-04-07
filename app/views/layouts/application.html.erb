@@ -9,9 +9,10 @@
 </head>
 <body>
 	<div id="header">
-		KARUTA	
+    <%= link_to 'KARUTA', :action => 'play_game' %>	
 	</div>
 
+  <%= link_to 'index', :action => 'index' %>
 	<!--ここに内容が入る-->
 	<%= yield %>
 

@@ -1,8 +1,10 @@
 class JapanesePoemsController < ApplicationController
   def index
+    @poems = JapanesePoem.all
   end
 
   def show
+    @picked_poem = JapanesePoem.find(params[:poem])
   end
 
   def play_game

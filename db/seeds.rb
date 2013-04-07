@@ -10,7 +10,7 @@ require "csv"
 
 #JapanesePoem.delete_all
 #if Rails.env == 'production'
-	JapanesePoem.connection.execute("select setval('japanese_poems_id_seq', 1, false)")
+#JapanesePoem.connection.execute("select setval('japanese_poems_id_seq', 1, false)")
 #else
 #	JapanesePoem.connection.execute("alter table  AUTO_INCREMENT = 1")
 #end

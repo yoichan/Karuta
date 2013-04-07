@@ -1,12 +1,14 @@
 source 'https://rubygems.org'
 
+gem 'rake', '~>10.0.3'
 gem 'rails', '3.2.8'
 gem 'pry'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 group :development do
-	gem 'mysql2'
+#gem 'mysql2'
+gem 'sqlite3'
 end
 group :production do
 	gem 'pg'
